@@ -1,62 +1,159 @@
-* {
-  width: auto;
-  height: auto;
-  box-sizing: border-box;
+
+.data {
+    display: flex;
+    margin-left: 200px;
 }
 
-body {
-  background-color: black;
+.modalDialog {
+	position: fixed;
+    /* width: 80%; */
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
 }
 
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  margin: 150px;
-  left: 0;
-  top: 0;
-  width: 80%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.btn, a {
+    /* width: 80px;
+    height: 40px;
+    margin-right: 40px; */
+    float: right;
+    text-decoration: none;
+}
+
+.modalDialog > div {
+	width: 90%;
+	position: relative;
+	margin: 10px auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
 }
 
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.close:hover { background: #00d9ff; }
+
+
+/* second modal  */
+
+/* .modal-header, h4, .close {
+    background-color: #5cb85c;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
 }
 
-.container {
-  padding: 80px 10px 10px;
+.modal-footer {
+    background-color: #f9f9f9;
+} */
+
+
+table{
+    width: 60%;
+    margin: 40px auto;
+    /* background: rgb(124,154,167); */
 }
 
-.form-label{
-  /* color: aliceblue; */
-  font-size: 20px;
+table.list{
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
 }
 
-.btn {
-  float: right;
+th, tr{
+    border: 1px solid black;
 }
 
-/* add data from the tester */
 
-.valide {
-  background-color: #5BE881;
+tbody {
+    border: 1px solid black;
 }
-.rejected {
-  background-color: #FF0000;
+
+/* td{
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px 15px;
+} */
+
+tr:nth-child(even), table.list thread> tr{
+    background-color: rgb(204,200,200);
 }
-.non-validation {
-  background-color: #FDB64D;
+
+input[type="text"],input[type="date"]{
+    width:91%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+
+#Etat[value="Validé"]{
+    background-color: #00d9ff;
+}
+
+input[type="submit"]{
+    background:#FDB64D;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: #4b99d8;
+}
+
+button{
+    background: #FDB64D;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover{
+    background:#4b99d8 ;
 }
