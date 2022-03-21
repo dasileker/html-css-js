@@ -58,7 +58,7 @@ function static(data){
   var entry = document.getElementById('myTable');
 
   for (var i = 0; i < data.length; i++){
-    var row = `<tr><td>${data[i].id}</td><td>${data[i].createdDate}</td><td>${data[i].status}</td><td>${data[i].firstName}</td><td>${data[i].lastName}</td><td>${data[i].userName}</td><td>${data[i].registrationNumber}</td><td><button onClick="onEdit(this)">Edit</button> <i  onClick="onDelete(this)" class="fa fa-trash-o" style="font-size:20px;color:red"></td></tr>`
+    var row = `<tr><td>${data[i].id}</td><td>${data[i].createdDate}</td><td>${data[i].status}</td><td>${data[i].firstName}</td><td>${data[i].lastName}</td><td>${data[i].userName}</td><td>${data[i].registrationNumber}</td><td><i  onClick="onDelete(this)" class="fa fa-trash-o" style="font-size:20px;color:red"></td></tr>`
 
     entry.innerHTML += row;
   }
@@ -97,7 +97,7 @@ function insertNewRecord(data) {
     cell7 = newRow.insertCell((6));
 		cell7.innerHTML = data.registrationNumber;
     cell8 = newRow.insertCell((7));
-    cell8.innerHTML = `<button onClick="onEdit(this)">Edit</button> <i  onClick="onDelete(this)" class="fa fa-trash-o" style="font-size:20px;color:red">`;
+    cell8.innerHTML = `<i  onClick="onDelete(this)" class="fa fa-trash-o" style="font-size:20px;color:red">`;
 
   
     
