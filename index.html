@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>test</title>
+  <link type="text/css" rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+  <div class="btn">
+    <button><a href="#openModal">Ajouter utilisateur</a></button>
+  </div>
+  <!-- <a href="#openModal">Open Modal</a> -->
+  
+  <div id="openModal" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <table>
+        <tr>
+          <td>
+            <div class="data">
+              <form autocomplete="off" onsubmit="onFormSubmit()">
+                <div>
+                  <label for="firstNameme">Name</label>
+                  <input type="text" name="firstName" id="firstName">
+                </div>
+                <div>
+                  <label for="lastName">Prenom</label>
+                  <input type="text" name="lastName" id="lastName">
+                </div>
+                <div>
+                  <label for="createdDate">Date</label>
+                  <input type="date" name="createdDate" id="createdDate">
+                </div>
+                <div>
+                  <label for="Etat">Etat</label>
+                  <input type="text" name="Etat" id="Etat">
+                </div>
+                <div>
+                  <label for="userName">Nom d'utilisateur</label>
+                  <input type="text" name="userName" id="userName">
+                </div>
+                <div>
+                  <label for="registrationNumber">Matricule</label>
+                  <input type="text" name="registrationNumber" id="registrationNumber">
+                </div>
+      
+                <div class="form_action--button">
+                  <input type="submit" value="Enregistrer" id="add">
+                </div>
+              </form>
+      
+            </div>
+      
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  
+
+  <td>
+    <table class="list" id="storeList">
+      <thead>
+        <tr>
+          <th id="ID">ID</th>
+          <th>Date de creation</th>
+          <th>Etat</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Nom d'utilisateur</th>
+          <th>Matricule</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+  
+      </tbody>
+    </table>
+  </td>
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+
+<head>
+  <title>Crud Operation</title>
+  <link type="text/css" rel="stylesheet" href="index.css"> </head>
+
+<body>
+  <table>
+    <tr>
+      <td>
+        <form autocomplete="off" onsubmit="onFormSubmit()">
+          <div>
+            <label for="productCode">Date de creation</label>
+            <input type="text" name="productCode" id="productCode">
+          </div>
+          <div>
+            <label for="product">Etat</label>
+            <input type="text" name="product" id="product">
+          </div>
+          <div>
+            <label for="qty">Nom</label>
+            <input type="text" name="qty" id="qty">
+          </div>
+          <div>
+            <label for="perPrice">Prenom</label>
+            <input type="text" name="perPrice" id="perPrice">
+          </div>
+
+          <div class="form_action--button">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </div>
+        </form>
+
+      <td>
+        <table class="list" id="storeList">
+          <thead>
+            <tr>
+              <th>Date de creation</th>
+              <th>Etat</th>
+              <th>Nom</th>
+              <th>Prenom</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </td>
+      </td>
+    </tr>
+  </table>
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html> -->
